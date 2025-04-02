@@ -31,15 +31,15 @@ This project provides a **highly optimized** data serialization format for effic
 
 
 ##  Optimizations for Speed & Memory
-###  ** Memory Pooling (`sync.Pool`)**
+###  Memory Pooling (`sync.Pool`)
 - **Why?** Avoid unnecessary memory allocations.
 - **How?** Buffers are **reused** instead of allocating new ones each time.
 
-###  ** Compact Binary Format**
+###  Compact Binary Format
 - **Why?** Reduces transmission time & storage footprint.
 - **How?** Uses **Varint Encoding** for efficient integer representation.
 
-###  ** Zero-Copy String Conversion (`unsafe.Pointer`)**
+###  Zero-Copy String Conversion (`unsafe.Pointer`)
 - **Why?** Avoids extra memory copying.
 - **How?** Converts `[]byte` to `string` **without additional allocations**.
 
